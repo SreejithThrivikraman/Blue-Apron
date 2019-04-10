@@ -13,6 +13,11 @@
 		2258F80D225D59BD005D3A51 /* Blue_Apron.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2258F80B225D59BD005D3A51 /* Blue_Apron.xcdatamodeld */; };
 		2258F80F225D59BF005D3A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2258F80E225D59BF005D3A51 /* Assets.xcassets */; };
 		2258F812225D59BF005D3A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2258F810225D59BF005D3A51 /* LaunchScreen.storyboard */; };
+		2258F81D225D5D0B005D3A51 /* LogoMakr_1SejRs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2258F81C225D5D0B005D3A51 /* LogoMakr_1SejRs.png */; };
+		2258F81F225D5D2D005D3A51 /* LogoMakr_2pmosC.png in Resources */ = {isa = PBXBuildFile; fileRef = 2258F81E225D5D2D005D3A51 /* LogoMakr_2pmosC.png */; };
+		2258F821225D61BC005D3A51 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258F820225D61BC005D3A51 /* Login.swift */; };
+		2258F823225D6401005D3A51 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 2258F822225D6400005D3A51 /* key.png */; };
+		747C6F083053C75A9D1A9C07 /* Pods_Blue_Apron.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		2258F80E225D59BF005D3A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2258F811225D59BF005D3A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2258F813225D59BF005D3A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2258F81C225D5D0B005D3A51 /* LogoMakr_1SejRs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoMakr_1SejRs.png; sourceTree = "<group>"; };
+		2258F81E225D5D2D005D3A51 /* LogoMakr_2pmosC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoMakr_2pmosC.png; sourceTree = "<group>"; };
+		2258F820225D61BC005D3A51 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		2258F822225D6400005D3A51 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.release.xcconfig"; sourceTree = "<group>"; };
+		C8D525668E0691AB4CC6CB53 /* Pods-Blue Apron.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.debug.xcconfig"; sourceTree = "<group>"; };
+		CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blue_Apron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747C6F083053C75A9D1A9C07 /* Pods_Blue_Apron.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +53,11 @@
 		2258F7F8225D59BD005D3A51 = {
 			isa = PBXGroup;
 			children = (
+				2258F819225D5B7B005D3A51 /* res */,
 				2258F803225D59BD005D3A51 /* Blue Apron */,
 				2258F802225D59BD005D3A51 /* Products */,
+				C76128A4A8EABC1F87D135AA /* Pods */,
+				FCDD73025157DE931ACFB182 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +74,7 @@
 			children = (
 				2258F804225D59BD005D3A51 /* AppDelegate.swift */,
 				2258F806225D59BD005D3A51 /* ViewController.swift */,
+				2258F820225D61BC005D3A51 /* Login.swift */,
 				2258F808225D59BD005D3A51 /* Main.storyboard */,
 				2258F80E225D59BF005D3A51 /* Assets.xcassets */,
 				2258F810225D59BF005D3A51 /* LaunchScreen.storyboard */,
@@ -67,6 +84,33 @@
 			path = "Blue Apron";
 			sourceTree = "<group>";
 		};
+		2258F819225D5B7B005D3A51 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				2258F81E225D5D2D005D3A51 /* LogoMakr_2pmosC.png */,
+				2258F822225D6400005D3A51 /* key.png */,
+				2258F81C225D5D0B005D3A51 /* LogoMakr_1SejRs.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		C76128A4A8EABC1F87D135AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8D525668E0691AB4CC6CB53 /* Pods-Blue Apron.debug.xcconfig */,
+				B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCDD73025157DE931ACFB182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2258F816225D59BF005D3A51 /* Build configuration list for PBXNativeTarget "Blue Apron" */;
 			buildPhases = (
+				7F6439CDAD64070A18DFFF88 /* [CP] Check Pods Manifest.lock */,
 				2258F7FD225D59BD005D3A51 /* Sources */,
 				2258F7FE225D59BD005D3A51 /* Frameworks */,
 				2258F7FF225D59BD005D3A51 /* Resources */,
+				1CC9FEDFAC890AFE19E2A78F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,13 +171,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2258F81F225D5D2D005D3A51 /* LogoMakr_2pmosC.png in Resources */,
 				2258F812225D59BF005D3A51 /* LaunchScreen.storyboard in Resources */,
+				2258F81D225D5D0B005D3A51 /* LogoMakr_1SejRs.png in Resources */,
+				2258F823225D6401005D3A51 /* key.png in Resources */,
 				2258F80F225D59BF005D3A51 /* Assets.xcassets in Resources */,
 				2258F80A225D59BD005D3A51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CC9FEDFAC890AFE19E2A78F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F6439CDAD64070A18DFFF88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blue Apron-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2258F7FD225D59BD005D3A51 /* Sources */ = {
@@ -141,6 +229,7 @@
 				2258F80D225D59BD005D3A51 /* Blue_Apron.xcdatamodeld in Sources */,
 				2258F807225D59BD005D3A51 /* ViewController.swift in Sources */,
 				2258F805225D59BD005D3A51 /* AppDelegate.swift in Sources */,
+				2258F821225D61BC005D3A51 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +373,11 @@
 		};
 		2258F817225D59BF005D3A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D525668E0691AB4CC6CB53 /* Pods-Blue Apron.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QT4H49ABSS;
 				INFOPLIST_FILE = "Blue Apron/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,9 +392,11 @@
 		};
 		2258F818225D59BF005D3A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QT4H49ABSS;
 				INFOPLIST_FILE = "Blue Apron/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
