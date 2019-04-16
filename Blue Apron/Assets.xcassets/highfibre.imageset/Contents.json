@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "highfibre.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "def_image.jpeg",
       "scale" : "2x"
     },
     {
