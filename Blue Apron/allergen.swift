@@ -8,6 +8,10 @@
 
 import UIKit
 
-class allergen: UICollectionViewCell {
+class allergen: UICollectionViewCell
+
+{
+    @IBOutlet weak var allergenImage: UIImageView!
+    @IBOutlet weak var allergenName: UILabel!
     
 }

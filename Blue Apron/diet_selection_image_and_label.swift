@@ -8,6 +8,13 @@
 
 import UIKit
 
-class diet_selection_image_and_label: UICollectionViewCell {
+class diet_selection_image_and_label: UICollectionViewCell
+
+{
+    @IBOutlet weak var diet_image: UIImageView!
+    @IBOutlet weak var diet_label: UILabel!
+    
+    
+
     
 }
