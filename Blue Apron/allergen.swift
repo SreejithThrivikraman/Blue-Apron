@@ -11,6 +11,9 @@ import UIKit
 class allergen: UICollectionViewCell
 
 {
+    
+    // views
+    
     @IBOutlet weak var allergenImage: UIImageView!
     @IBOutlet weak var allergenName: UILabel!
     
