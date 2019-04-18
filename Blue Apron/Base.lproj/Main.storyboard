@@ -113,12 +113,23 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-aI-rfr">
+                                                    <rect key="frame" x="-7" y="0.0" width="155" height="145"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.77574425629999999" green="0.77574425629999999" blue="0.77574425629999999" alpha="0.70226883561643838" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemSelected" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-Ai-45Q">
+                                                    <rect key="frame" x="106" y="108" width="36" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="diet_image" destination="Yab-Yb-kz5" id="l86-KA-kS9"/>
                                             <outlet property="diet_label" destination="RiZ-f6-3RN" id="jl5-H9-7NC"/>
+                                            <outlet property="fadeImage" destination="AVJ-aI-rfr" id="Iof-UJ-cQl"/>
+                                            <outlet property="itemSelected" destination="MiZ-Ai-45Q" id="Iwg-iY-UUb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -186,17 +197,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.22352941176470587" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SQP-DM-gNU">
-                                    <size key="itemSize" width="139" height="153"/>
+                                    <size key="itemSize" width="139" height="159"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="allergens" reuseIdentifier="allergens" id="Uf1-mD-i0u" customClass="allergen" customModule="Blue_Apron" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="153"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="139" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="139" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5k-83-xWb">
@@ -205,17 +216,28 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfr-WL-A6K">
-                                                    <rect key="frame" x="3" y="127" width="136" height="24"/>
+                                                    <rect key="frame" x="12" y="130" width="107" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTw-wK-YeQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="159"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.77574425633183597" green="0.77574425633183597" blue="0.77574425633183597" alpha="0.75323737157534243" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ncW-Pl-ceo">
+                                                    <rect key="frame" x="107" y="127" width="26" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="allergenImage" destination="A5k-83-xWb" id="FhC-vd-Xdj"/>
                                             <outlet property="allergenName" destination="yfr-WL-A6K" id="CJg-bz-1GP"/>
+                                            <outlet property="fadeView" destination="tTw-wK-YeQ" id="OWW-zA-Ixc"/>
+                                            <outlet property="selectedImage" destination="ncW-Pl-ceo" id="cpR-DZ-0KH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -274,5 +296,6 @@
     </scenes>
     <resources>
         <image name="LogoMakr_2pmosC.png" width="600" height="600"/>
+        <image name="itemSelected" width="512" height="512"/>
     </resources>
 </document>

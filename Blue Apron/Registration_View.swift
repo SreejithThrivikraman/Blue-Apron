@@ -51,11 +51,8 @@ class Registration_View: UIViewController, UICollectionViewDelegate,UICollection
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-       NextButton.layer.cornerRadius = 20
+        diet_selection_grid.allowsMultipleSelection = true
+        NextButton.layer.cornerRadius = 20
     }
     
-
- 
-
 }
