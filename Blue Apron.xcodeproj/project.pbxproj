@@ -23,6 +23,7 @@
 		22954DFC226557190091E4E0 /* allergen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22954DFB226557190091E4E0 /* allergen.swift */; };
 		22954DFE226557A30091E4E0 /* AllergenSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22954DFD226557A30091E4E0 /* AllergenSelection.swift */; };
 		747C6F083053C75A9D1A9C07 /* Pods_Blue_Apron.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */; };
+		B2D1D9372266A72200B63D00 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1D9362266A72200B63D00 /* CalenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		2258F822225D6400005D3A51 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		22954DFB226557190091E4E0 /* allergen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allergen.swift; sourceTree = "<group>"; };
 		22954DFD226557A30091E4E0 /* AllergenSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenSelection.swift; sourceTree = "<group>"; };
+		B2D1D9362266A72200B63D00 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.release.xcconfig"; sourceTree = "<group>"; };
 		C8D525668E0691AB4CC6CB53 /* Pods-Blue Apron.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.debug.xcconfig"; sourceTree = "<group>"; };
 		CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blue_Apron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				2258F810225D59BF005D3A51 /* LaunchScreen.storyboard */,
 				2258F813225D59BF005D3A51 /* Info.plist */,
 				2258F80B225D59BD005D3A51 /* Blue_Apron.xcdatamodeld */,
+				B2D1D9362266A72200B63D00 /* CalenderViewController.swift */,
 			);
 			path = "Blue Apron";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				TargetAttributes = {
 					2258F800225D59BD005D3A51 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -206,10 +210,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +258,7 @@
 				2258F805225D59BD005D3A51 /* AppDelegate.swift in Sources */,
 				22954DFC226557190091E4E0 /* allergen.swift in Sources */,
 				22553713225ECA5D004C6C59 /* Registration_View.swift in Sources */,
+				B2D1D9372266A72200B63D00 /* CalenderViewController.swift in Sources */,
 				2258F821225D61BC005D3A51 /* Login.swift in Sources */,
 				22553715225ECBCD004C6C59 /* diet_selection_image_and_label.swift in Sources */,
 			);
@@ -405,7 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "st.Blue-Apron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -424,7 +435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "st.Blue-Apron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
