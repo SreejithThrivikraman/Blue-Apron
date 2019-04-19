@@ -36,6 +36,11 @@ class Registration_View: UIViewController, UICollectionViewDelegate,UICollection
         cell.diet_label.text = sample_diet[indexPath.item ]
         cell.diet_image.image = diet_images[indexPath.item ]
         cell.layer.backgroundColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 12.0
+        cell.layer.masksToBounds = true
+        
+        
+        
         return cell
     }
     

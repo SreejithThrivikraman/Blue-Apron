@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22135CB52269750E00D69CB6 /* homePageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22135CB42269750E00D69CB6 /* homePageTableTableViewController.swift */; };
 		2223A6AC225F922D003305AF /* pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2223A6AB225F922D003305AF /* pic.png */; };
+		22328B1C22694BC10036B646 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22328B1B22694BC10036B646 /* HomePage.swift */; };
+		22328B1E2269511F0036B646 /* homePageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22328B1D2269511F0036B646 /* homePageSlider.swift */; };
 		22553713225ECA5D004C6C59 /* Registration_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22553712225ECA5D004C6C59 /* Registration_View.swift */; };
 		22553715225ECBCD004C6C59 /* diet_selection_image_and_label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22553714225ECBCD004C6C59 /* diet_selection_image_and_label.swift */; };
 		2258F805225D59BD005D3A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258F804225D59BD005D3A51 /* AppDelegate.swift */; };
@@ -20,13 +23,17 @@
 		2258F81F225D5D2D005D3A51 /* LogoMakr_2pmosC.png in Resources */ = {isa = PBXBuildFile; fileRef = 2258F81E225D5D2D005D3A51 /* LogoMakr_2pmosC.png */; };
 		2258F821225D61BC005D3A51 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258F820225D61BC005D3A51 /* Login.swift */; };
 		2258F823225D6401005D3A51 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 2258F822225D6400005D3A51 /* key.png */; };
+		2272822F2267F32100F06B78 /* Register_username_pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272822E2267F32100F06B78 /* Register_username_pass.swift */; };
 		22954DFC226557190091E4E0 /* allergen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22954DFB226557190091E4E0 /* allergen.swift */; };
 		22954DFE226557A30091E4E0 /* AllergenSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22954DFD226557A30091E4E0 /* AllergenSelection.swift */; };
 		747C6F083053C75A9D1A9C07 /* Pods_Blue_Apron.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22135CB42269750E00D69CB6 /* homePageTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageTableTableViewController.swift; sourceTree = "<group>"; };
 		2223A6AB225F922D003305AF /* pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic.png; sourceTree = "<group>"; };
+		22328B1B22694BC10036B646 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		22328B1D2269511F0036B646 /* homePageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageSlider.swift; sourceTree = "<group>"; };
 		22553712225ECA5D004C6C59 /* Registration_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration_View.swift; sourceTree = "<group>"; };
 		22553714225ECBCD004C6C59 /* diet_selection_image_and_label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diet_selection_image_and_label.swift; sourceTree = "<group>"; };
 		2258F801225D59BD005D3A51 /* Blue Apron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Apron.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +48,7 @@
 		2258F81E225D5D2D005D3A51 /* LogoMakr_2pmosC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoMakr_2pmosC.png; sourceTree = "<group>"; };
 		2258F820225D61BC005D3A51 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		2258F822225D6400005D3A51 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		2272822E2267F32100F06B78 /* Register_username_pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_username_pass.swift; sourceTree = "<group>"; };
 		22954DFB226557190091E4E0 /* allergen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allergen.swift; sourceTree = "<group>"; };
 		22954DFD226557A30091E4E0 /* AllergenSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenSelection.swift; sourceTree = "<group>"; };
 		B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +97,10 @@
 				22954DFD226557A30091E4E0 /* AllergenSelection.swift */,
 				22553714225ECBCD004C6C59 /* diet_selection_image_and_label.swift */,
 				22954DFB226557190091E4E0 /* allergen.swift */,
+				2272822E2267F32100F06B78 /* Register_username_pass.swift */,
+				22328B1B22694BC10036B646 /* HomePage.swift */,
+				22328B1D2269511F0036B646 /* homePageSlider.swift */,
+				22135CB42269750E00D69CB6 /* homePageTableTableViewController.swift */,
 				2223A6AB225F922D003305AF /* pic.png */,
 				2258F808225D59BD005D3A51 /* Main.storyboard */,
 				2258F80E225D59BF005D3A51 /* Assets.xcassets */,
@@ -242,10 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2272822F2267F32100F06B78 /* Register_username_pass.swift in Sources */,
 				2258F80D225D59BD005D3A51 /* Blue_Apron.xcdatamodeld in Sources */,
+				22135CB52269750E00D69CB6 /* homePageTableTableViewController.swift in Sources */,
 				2258F807225D59BD005D3A51 /* ViewController.swift in Sources */,
 				22954DFE226557A30091E4E0 /* AllergenSelection.swift in Sources */,
 				2258F805225D59BD005D3A51 /* AppDelegate.swift in Sources */,
+				22328B1C22694BC10036B646 /* HomePage.swift in Sources */,
+				22328B1E2269511F0036B646 /* homePageSlider.swift in Sources */,
 				22954DFC226557190091E4E0 /* allergen.swift in Sources */,
 				22553713225ECA5D004C6C59 /* Registration_View.swift in Sources */,
 				2258F821225D61BC005D3A51 /* Login.swift in Sources */,

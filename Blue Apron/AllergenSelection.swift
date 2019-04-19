@@ -45,6 +45,8 @@ class AllergenSelection: UIViewController, UICollectionViewDataSource, UICollect
         
         cell.allergenName.text = allergen_names[indexPath.item ]
         cell.allergenImage.image = allergen_images[indexPath.item ]
+        cell.layer.cornerRadius = 15.0
+        cell.layer.masksToBounds = true
         
         return cell
     }

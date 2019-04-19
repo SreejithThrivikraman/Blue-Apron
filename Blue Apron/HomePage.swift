@@ -8,12 +8,26 @@
 
 import UIKit
 
-class HomePage: UIViewController {
+class HomePage: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var scheduleTable: UIView!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        container.layer.cornerRadius = 12.0
+        container.layer.masksToBounds = true
+        container.backgroundColor = UIColor.green
+        
+        scheduleTable.layer.cornerRadius = 12.0
+        scheduleTable.layer.masksToBounds = true
+       
+       
     }
     
 
