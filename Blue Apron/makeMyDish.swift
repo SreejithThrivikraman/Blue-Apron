@@ -8,23 +8,47 @@
 
 import UIKit
 
-class makeMyDish: UIViewController {
+class makeMyDish: UIViewController
+{
 
-    override func viewDidLoad() {
+   
+    @IBOutlet weak var ingridients_text: UITextView!
+    @IBOutlet weak var ingridientEntry: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var ingridientPool: UITextView!
+    @IBOutlet weak var recipePool: UITextView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        ingridients_text.isEditable = false
+        
 
-        // Do any additional setup after loading the view.
+        submitButton.layer.borderColor = UIColor.white.cgColor
+        cancelButton.layer.borderColor = UIColor.white.cgColor
+        addButton.layer.borderColor    = UIColor.white.cgColor
+        
+        submitButton.layer.cornerRadius = 10
+        cancelButton.layer.cornerRadius = 10
+        addButton.layer.cornerRadius    = 10
+        
+        submitButton.layer.borderWidth = 1
+        cancelButton.layer.borderWidth = 1
+        addButton.layer.borderWidth    = 1
+        
+        recipePool.layer.borderColor = UIColor.gray.cgColor
+        recipePool.layer.borderWidth = 1.0;
+        recipePool.layer.cornerRadius = 8;
+        
+        ingridientPool.layer.borderColor = UIColor.gray.cgColor
+        ingridientPool.layer.borderWidth = 1.0;
+        ingridientPool.layer.cornerRadius = 8;
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

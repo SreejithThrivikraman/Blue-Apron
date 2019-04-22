@@ -8,6 +8,10 @@
 
 import UIKit
 
-class DishImageClassCollectionViewCell: UICollectionViewCell {
+class DishImageClassCollectionViewCell: UICollectionViewCell
+{
+    @IBOutlet weak var dishImage: UIImageView!
+    @IBOutlet weak var dishName: UILabel!
+    
     
 }

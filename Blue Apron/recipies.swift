@@ -8,23 +8,50 @@
 
 import UIKit
 
-class recipies: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class recipies: UIViewController
+{
+    
+    @IBOutlet var Stage: UIView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var receipePoolContainer: UIView!
+    @IBOutlet weak var userRecipeContainer: UIView!
+    
+   
+    
+    @IBAction func segmentTapped(_ sender: Any)
+    {
+        var segmentNumber = segmentControl.selectedSegmentIndex
+        
+        if (segmentNumber == 0)
+        {
+            userRecipeContainer.alpha = 0
+            receipePoolContainer.alpha = 1
+        }
+        
+        else if (segmentNumber == 1)
+        {
+            userRecipeContainer.alpha = 1
+            receipePoolContainer.alpha = 0
+            
+        }
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        userRecipeContainer.alpha = 0
+        receipePoolContainer.alpha = 1
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        userRecipeContainer.layer.borderColor = UIColor.gray.cgColor
+        userRecipeContainer.layer.borderWidth = 1.0;
+        userRecipeContainer.layer.cornerRadius = 8;
+        
+        receipePoolContainer.layer.borderColor = UIColor.gray.cgColor
+        receipePoolContainer.layer.borderWidth = 1.0;
+        receipePoolContainer.layer.cornerRadius = 8;
+        
     }
-    */
-
+    
 }

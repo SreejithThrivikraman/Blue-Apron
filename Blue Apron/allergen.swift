@@ -22,8 +22,6 @@ class allergen: UICollectionViewCell
     {
         super.init(coder: aDecoder)
         //fatalError("init(coder:) has not been implemented")
-        
-
     }
     
     
