@@ -57,8 +57,7 @@ class makeMyDish: UIViewController
         
         
         
-        ingridientPool.text = "edit Text"
-        recipePool.text = "edit prep"
+        
         dishName = "New York"
     }
     
@@ -71,7 +70,15 @@ class makeMyDish: UIViewController
         
     }
 
-
+    @IBAction func addIngridients(_ sender: Any)
+    {
+        
+        ingridientPool.text.append(ingridientEntry.text!)
+        ingridientPool.text.append(" ")
+        ingridientEntry.text = ""
+        
+    }
+    
     @IBAction func postButton(_ sender: Any)
     {
         

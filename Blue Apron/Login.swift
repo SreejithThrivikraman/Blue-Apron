@@ -63,7 +63,7 @@ class Login: UIViewController
                     
                     
                     //Go to the HomeViewController if the login is sucessful
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "dash")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else

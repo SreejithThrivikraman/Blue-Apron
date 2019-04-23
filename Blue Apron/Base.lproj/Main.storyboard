@@ -542,6 +542,9 @@
                                                 <state key="normal" title="Add">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addIngridients:" destination="Df6-jB-kxF" eventType="touchUpInside" id="SlG-1l-npE"/>
+                                                </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m55-BV-Z4R">
                                                 <rect key="frame" x="24" y="340" width="330" height="128"/>
