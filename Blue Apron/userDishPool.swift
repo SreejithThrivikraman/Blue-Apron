@@ -8,6 +8,9 @@
 
 import UIKit
 
-class userDishPool: UICollectionViewCell {
-    
+class userDishPool: UICollectionViewCell
+
+{
+    @IBOutlet weak var userDishImage: UIImageView!
+    @IBOutlet weak var userDishName: UILabel!
 }
