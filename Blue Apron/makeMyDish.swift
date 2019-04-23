@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class makeMyDish: UIViewController
 {
-
+    var ref:DatabaseReference?
+    var dishName: String = ""
+    var ingName: String = ""
+    var prep: String = ""
+    var dishImage: String = ""
    
-    @IBOutlet weak var ingridients_text: UITextView!
+   
     @IBOutlet weak var ingridientEntry: UITextField!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var ingridientPool: UITextView!
@@ -24,8 +30,9 @@ class makeMyDish: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
-        ingridients_text.isEditable = false
+        ingridientPool.isEditable = false
         
 
         submitButton.layer.borderColor = UIColor.white.cgColor
@@ -47,8 +54,33 @@ class makeMyDish: UIViewController
         ingridientPool.layer.borderColor = UIColor.gray.cgColor
         ingridientPool.layer.borderWidth = 1.0;
         ingridientPool.layer.cornerRadius = 8;
+        
+        
+        
+        ingridientPool.text = "edit Text"
+        recipePool.text = "edit prep"
+        dishName = "New York"
     }
     
+    
+    func writeData(ingr: String,recp: String)
+    {
+        ref?.child("userDish").child(dishName).child("Ingredient").setValue(ingName)
+        ref?.child("userDish").child(dishName).child("Preparation").setValue(prep)
+        
+        
+    }
 
 
+    @IBAction func postButton(_ sender: Any)
+    {
+        
+        
+        ingName = ingridientPool.text
+        prep    = recipePool.text
+        
+        print("Value ==== \(ingName)")
+        print("prep =====\(prep)")
+        writeData(ingr: ingName,recp: prep)
+    }
 }

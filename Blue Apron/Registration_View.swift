@@ -105,7 +105,7 @@ class Registration_View: UIViewController, UICollectionViewDelegate,UICollection
            
         }
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "dash")
         self.present(vc!, animated: true, completion: nil)
         
     }

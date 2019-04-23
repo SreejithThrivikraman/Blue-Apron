@@ -558,6 +558,9 @@
                                                 <state key="normal" title="Post !">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postButton:" destination="Df6-jB-kxF" eventType="touchUpInside" id="rAD-or-evG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9af-HK-zqG">
                                                 <rect key="frame" x="24" y="865" width="330" height="30"/>
@@ -612,7 +615,6 @@
                         <outlet property="cancelButton" destination="9af-HK-zqG" id="nCi-u5-q0e"/>
                         <outlet property="ingridientEntry" destination="nwB-KD-RZu" id="ySL-wk-hjJ"/>
                         <outlet property="ingridientPool" destination="m55-BV-Z4R" id="P6u-bm-n2R"/>
-                        <outlet property="ingridients_text" destination="m55-BV-Z4R" id="aaT-sF-cQ6"/>
                         <outlet property="recipePool" destination="t3m-hc-2PQ" id="UxX-JA-waC"/>
                         <outlet property="submitButton" destination="Y7h-DI-1Ji" id="bxl-6S-Mbb"/>
                     </connections>
@@ -677,7 +679,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="znp-GN-pZk">
             <objects>
-                <tabBarController id="drc-FF-aI1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="dash" id="drc-FF-aI1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WFO-kd-Xun"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Dr-kd-EKJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
