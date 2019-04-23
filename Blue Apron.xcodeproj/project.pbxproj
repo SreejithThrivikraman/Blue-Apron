@@ -32,6 +32,7 @@
 		22AB30B2226E64FE00D96DC4 /* DishImageClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB30B1226E64FE00D96DC4 /* DishImageClassCollectionViewCell.swift */; };
 		22AB30B4226E6EBA00D96DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AB30B3226E6EB900D96DC4 /* Assets.xcassets */; };
 		22AB30B6226E9BCE00D96DC4 /* userDishPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB30B5226E9BCE00D96DC4 /* userDishPool.swift */; };
+		22ACB518226F6E1D003FF75C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22ACB517226F6E1D003FF75C /* GoogleService-Info.plist */; };
 		22E31257226A6F3800385AA9 /* makeMyDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E31256226A6F3800385AA9 /* makeMyDish.swift */; };
 		747C6F083053C75A9D1A9C07 /* Pods_Blue_Apron.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA44B3106DA934AB11FF4694 /* Pods_Blue_Apron.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		22AB30B1226E64FE00D96DC4 /* DishImageClassCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishImageClassCollectionViewCell.swift; sourceTree = "<group>"; };
 		22AB30B3226E6EB900D96DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22AB30B5226E9BCE00D96DC4 /* userDishPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDishPool.swift; sourceTree = "<group>"; };
+		22ACB517226F6E1D003FF75C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		22E31256226A6F3800385AA9 /* makeMyDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeMyDish.swift; sourceTree = "<group>"; };
 		B429A2C89191962DB8119D42 /* Pods-Blue Apron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.release.xcconfig"; sourceTree = "<group>"; };
 		C8D525668E0691AB4CC6CB53 /* Pods-Blue Apron.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blue Apron.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				2258F808225D59BD005D3A51 /* Main.storyboard */,
 				2258F810225D59BF005D3A51 /* LaunchScreen.storyboard */,
 				2258F813225D59BF005D3A51 /* Info.plist */,
+				22ACB517226F6E1D003FF75C /* GoogleService-Info.plist */,
 				2258F80B225D59BD005D3A51 /* Blue_Apron.xcdatamodeld */,
 			);
 			path = "Blue Apron";
@@ -171,6 +174,7 @@
 				2258F7FE225D59BD005D3A51 /* Frameworks */,
 				2258F7FF225D59BD005D3A51 /* Resources */,
 				1CC9FEDFAC890AFE19E2A78F /* [CP] Embed Pods Frameworks */,
+				EF6FCE1B8A118581EF883F2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2223A6AC225F922D003305AF /* pic.png in Resources */,
+				22ACB518226F6E1D003FF75C /* GoogleService-Info.plist in Resources */,
 				2258F81F225D5D2D005D3A51 /* LogoMakr_2pmosC.png in Resources */,
 				2258F812225D59BF005D3A51 /* LaunchScreen.storyboard in Resources */,
 				2258F81D225D5D0B005D3A51 /* LogoMakr_1SejRs.png in Resources */,
@@ -239,11 +244,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,6 +279,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6FCE1B8A118581EF883F2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blue Apron/Pods-Blue Apron-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

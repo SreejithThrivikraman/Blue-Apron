@@ -8,4 +8,9 @@ target 'Blue Apron' do
   # Pods for Blue Apron
 
   pod 'TransitionButton'
+  pod 'Firebase/Core'
+  pod 'FirebaseUI/Auth'
+  pod 'Firebase/Database'
+
+ 
 end
