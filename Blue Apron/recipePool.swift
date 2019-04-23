@@ -21,11 +21,15 @@ class recipePool: UIViewController,UICollectionViewDelegate, UICollectionViewDat
     @IBOutlet weak var tableCollection: UITableView!
     var imageUrls:[String] = []
     var nameUrls:[String] = []
+    var ingredients:[String] = []
+    var healthLabels:[String] = []
     var nameCount = Int()
     var timer   = Timer()
     var counter = 0
     var rowIndex = Int()
-
+    var instructionURI = String()
+    var selectedJSON = JSON()
+    
     let urls: String = "https://test.edamam.com/search?q=meat"
     
 //    let sampleDish_images: [UIImage] =  [   UIImage(named: "butterChicken")!,
@@ -92,6 +96,7 @@ class recipePool: UIViewController,UICollectionViewDelegate, UICollectionViewDat
     
     func images(json: JSON){
         
+        selectedJSON = json
         let counts = json["hits"].count
         nameCount = counts
         //let count = json["hits"][0]["recipe"]["label"]
@@ -104,10 +109,37 @@ class recipePool: UIViewController,UICollectionViewDelegate, UICollectionViewDat
         }
         print("ImageURLS\(nameUrls)")
         
+        
+        
         tableCollection.reloadData()
     
         
     }
+    
+    func getIngredients(row: Int){
+        
+       let counts  = selectedJSON["hits"][row]["recipe"]["ingredientLines"].count
+//
+        for count in 0..<counts{
+            ingredients.append(selectedJSON["hits"][row]["recipe"]["ingredientLines"][count].stringValue)
+        }
+        
+        instructionURI = selectedJSON["hits"][row]["recipe"]["url"].stringValue
+        print(instructionURI)
+        
+    }
+    
+    func getHealthLabels(row: Int){
+        
+        let counts  = selectedJSON["hits"][row]["recipe"]["healthLabels"].count
+        
+        for count in 0..<counts{
+       healthLabels.append(selectedJSON["hits"][row]["recipe"]["healthLabels"][count].stringValue)
+            
+        }
+        print(healthLabels)
+    }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -221,8 +253,13 @@ class recipePool: UIViewController,UICollectionViewDelegate, UICollectionViewDat
         
         // Segue to the second view controller
         rowIndex = indexPath.row
+        getIngredients(row: rowIndex)
+        getHealthLabels(row: rowIndex)
         self.performSegue(withIdentifier: "recipeDetailSegue", sender: self)
+        ingredients.removeAll()
+        healthLabels.removeAll()
     }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -233,7 +270,12 @@ class recipePool: UIViewController,UICollectionViewDelegate, UICollectionViewDat
         // set a variable in the second view controller with the data to pass
         recipeDescVC.recipeNameString = imageUrls[rowIndex]
         recipeDescVC.recipeImageUrl = nameUrls[rowIndex]
+        recipeDescVC.ingredientsString = ingredients.joined()
+        recipeDescVC.instructionURI = instructionURI
+        recipeDescVC.healthString = healthLabels.joined()
     }
     
-
+    
+    
+    
 }

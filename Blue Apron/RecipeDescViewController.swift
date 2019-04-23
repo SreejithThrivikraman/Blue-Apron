@@ -17,12 +17,16 @@ class RecipeDescViewController: UIViewController {
     
     @IBOutlet weak var ingredientsView: UITextView!
     
-    @IBOutlet weak var preperationView: UITextView!
-    
-    @IBOutlet weak var nutritionView: UITextView!
-    
     @IBOutlet weak var healthLabelView: UITextView!
     
+    @IBAction func instructionButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "webSegue", sender: self)
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "dateSegue", sender: self)
+    }
     
     var recipeNameString = String()
     
@@ -36,12 +40,15 @@ class RecipeDescViewController: UIViewController {
     
     var healthString = String()
     
+    var instructionURI = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(recipeNameString)
         print(recipeImageUrl)
+        print(ingredientsString)
         
         recipeName.text = recipeNameString
         recipeName.sizeToFit()
@@ -52,9 +59,28 @@ class RecipeDescViewController: UIViewController {
         
         recipeImage.image = UIImage(data: data!)
         
+        ingredientsView.text = ingredientsString
+        
+        healthLabelView.text = healthString
+        
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "webSegue"{
+            let webVC = segue.destination as! WebViewViewController
+            webVC.webURL = instructionURI
+        }
+        else if segue.identifier == "dateSegue"{
+            print("entered")
+            let dateVC = segue.destination as! ReminderViewController
+            dateVC.recipeName = recipeNameString
+        }
+        
+       
+    }
 
+  
     /*
     // MARK: - Navigation
 
