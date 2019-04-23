@@ -8,4 +8,6 @@ target 'Blue Apron' do
   # Pods for Blue Apron
 
   pod 'TransitionButton'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
