@@ -300,7 +300,7 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="drc-FF-aI1" kind="showDetail" id="Fro-bA-8zR"/>
+                                    <action selector="signupAction:" destination="jIy-OA-Rvv" eventType="touchUpInside" id="Hym-ki-gr3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -619,7 +619,7 @@
         <!--Home-->
         <scene sceneID="8Ww-fk-fnP">
             <objects>
-                <viewController id="POl-07-nxZ" customClass="HomePage" customModule="Blue_Apron" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="POl-07-nxZ" customClass="HomePage" customModule="Blue_Apron" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uR4-ma-951">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
