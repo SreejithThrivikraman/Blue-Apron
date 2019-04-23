@@ -83,7 +83,7 @@
         <!--Registration View-->
         <scene sceneID="9XE-bd-Hgh">
             <objects>
-                <viewController id="DOB-rr-HuW" customClass="Registration_View" customModule="Blue_Apron" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="diet" id="DOB-rr-HuW" customClass="Registration_View" customModule="Blue_Apron" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1n8-6Y-vrl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="   Next &gt;&gt;"/>
                                 <connections>
-                                    <segue destination="QJB-Ed-Vur" kind="show" id="9tC-Ju-NBn"/>
+                                    <action selector="nextButton:" destination="DOB-rr-HuW" eventType="touchUpInside" id="mew-aS-55Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,9 +194,6 @@
                                 <state key="normal" title="   Next &gt;&gt;">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="jIy-OA-Rvv" kind="show" id="F7h-59-GTc"/>
-                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ju1-X0-cPF">
                                 <rect key="frame" x="35" y="167" width="307" height="380"/>
@@ -277,22 +274,29 @@
                                 <rect key="frame" x="104" y="106" width="166" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjG-hc-kOq">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjG-hc-kOq">
                                 <rect key="frame" x="54" y="318" width="267" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-Sd-fwN">
-                                <rect key="frame" x="54" y="356" width="267" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsQ-4a-mYw">
+                                <rect key="frame" x="54" y="355" width="267" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-Sd-fwN">
+                                <rect key="frame" x="54" y="393" width="267" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nv-vr-dWX">
-                                <rect key="frame" x="125" y="404" width="125" height="42"/>
+                                <rect key="frame" x="125" y="441" width="125" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -309,13 +313,14 @@
                     </view>
                     <connections>
                         <outlet property="password" destination="9P4-Sd-fwN" id="5KW-Do-S5O"/>
+                        <outlet property="profileName" destination="IsQ-4a-mYw" id="NuF-Jd-sYU"/>
                         <outlet property="signMe" destination="4Nv-vr-dWX" id="X9s-2w-WSm"/>
                         <outlet property="userName" destination="TjG-hc-kOq" id="WUS-fS-XZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGx-LM-uzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1073" y="961"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eL1-pA-lL7">
@@ -651,7 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkb-qF-zqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5613.6000000000004" y="-179.46026986506749"/>
+            <point key="canvasLocation" x="3522" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gZz-KT-Ed2">
@@ -945,7 +950,4 @@
         <image name="knifeFork" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="SsF-40-rPO"/>
-    </inferredMetricsTieBreakers>
 </document>

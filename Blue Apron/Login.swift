@@ -8,7 +8,6 @@
 
 import UIKit
 import TransitionButton
-
 import Firebase
 import FirebaseAuth
 
@@ -21,18 +20,18 @@ class Login: UIViewController
     @IBOutlet weak var Text_userName: UITextField!
     @IBOutlet weak var button_login: UIButton!
     
+    var ref:DatabaseReference?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
       
-       
+        ref = Database.database().reference()
         button_login.layer.cornerRadius = 20
         Text_userName.placeholder = "Username"
         Text_Password.placeholder = "Password"
-        
-     
         
     }
     
@@ -59,6 +58,10 @@ class Login: UIViewController
                     //Print into the console if successfully logged in
                     print("You have successfully logged in")
                     
+                    
+                    
+                    
+                    
                     //Go to the HomeViewController if the login is sucessful
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
@@ -77,6 +80,9 @@ class Login: UIViewController
             }
         }
     }
+    
+    
+   
     
    
 }

@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class Registration_View: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource
 {
+    
+    var ref:DatabaseReference?
+    var databaseHandle:DatabaseHandle?
+    var selected_diet : [String] = []
+    
+    var Uname : String!
     
     @IBOutlet weak var NextButton: UIButton!
     
@@ -39,12 +47,20 @@ class Registration_View: UIViewController, UICollectionViewDelegate,UICollection
         cell.layer.cornerRadius = 12.0
         cell.layer.masksToBounds = true
         
-        
-        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! diet_selection_image_and_label
+        selected_diet.append(sample_diet[indexPath.item])
+        
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         return sample_diet.count
     }
     
@@ -58,6 +74,41 @@ class Registration_View: UIViewController, UICollectionViewDelegate,UICollection
         super.viewDidLoad()
         diet_selection_grid.allowsMultipleSelection = true
         NextButton.layer.cornerRadius = 20
+        ref = Database.database().reference()
+        
+        let userDefaults = UserDefaults.standard
+        if let value = userDefaults.object(forKey: "Uname")
+        {
+            
+            Uname = value as! String
+            print("value is \(Uname)")
+            
+        }
+        
     }
+    
+    
+    func writeData(value: String)
+    {
+        ref?.child("Users").child(Uname).child("Preference").childByAutoId().setValue(value)
+    }
+    
+    
+   // ref?.child(parentRef).child(childRef).child("email").setValue(userName.text)
+    
+    @IBAction func nextButton(_ sender: Any)
+    {
+        print(selected_diet)
+        for each in selected_diet
+        {
+            writeData(value: each)
+           
+        }
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+        self.present(vc!, animated: true, completion: nil)
+        
+    }
+    
     
 }
