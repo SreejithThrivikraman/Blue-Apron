@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class homePageTableTableViewController: ViewController, UITableViewDelegate,UITableViewDataSource
 {
 
+    
     
     @IBOutlet weak var dishScheduleTableView: UITableView!
     
@@ -25,7 +28,7 @@ class homePageTableTableViewController: ViewController, UITableViewDelegate,UITa
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+       
         dishScheduleTableView.layer.cornerRadius = 12.0
         dishScheduleTableView.layer.masksToBounds = true
         
@@ -63,6 +66,8 @@ class homePageTableTableViewController: ViewController, UITableViewDelegate,UITa
     {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "SCell")
         cell.imageView?.image = UIImage(named: "bal")
+        
+         
         cell.textLabel?.text = dishNameArray[indexPath.section]
         cell.imageView?.layer.cornerRadius = 12.0
         cell.imageView?.layer.masksToBounds = true
